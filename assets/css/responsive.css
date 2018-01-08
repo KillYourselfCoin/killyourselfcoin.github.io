@@ -1,0 +1,155 @@
+@media only screen and (min-width: 768px) {
+    .header-right {
+        display: block;
+        float: right;
+        padding: 6px 20px;
+    }
+    .header-headline {
+        text-align: left;
+        max-width: 380px;
+        padding-top: 75px;
+    }
+    .header-running-text {
+        line-height: 30px;
+        margin: 0;
+        text-align: left;
+    }
+    .hero {
+        padding-bottom: 230px;
+    }
+    .hero-button {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .hero-right {
+        text-align: left;
+    }
+    .about-section {
+        padding-top: 60px;
+    }
+    .abouts-headline {
+        color: white;
+        padding-bottom: 10px;
+    }
+    .logos {
+        max-width: 100%;
+    }
+    .white-section-text {
+        text-align: justify;
+        padding-top: 40px;
+    }
+    .faq-section-desc {
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 30px;
+        max-width: 100%;
+        margin: inherit;
+        text-align: left;
+    }
+    .bounty-section-desc {
+        font-weight: 300;
+        font-size: 20pt;
+        line-height: 35px;
+        max-width: 100%;
+        margin: inherit;
+        text-align: left;
+    }
+    .contributing-table {
+        padding: 70px 0 100px;
+        max-width: 1050px;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .bounty-section-desc,
+    .faq-section-desc,
+    .question,
+    .answer {
+        padding-left: 0px;
+        padding-right: 0px;
+        /*margin-left: 0px;
+        margin-right: 0px;
+        */
+        margin: auto;
+    }
+    .bountysection-desc ul,
+    .faq-section-desc ul {
+        padding-left: 0px;
+    }
+    .question,
+    .answer {
+        margin-top: 1em;
+        line-height: 110%;
+    }
+    .coin-logo {
+        position: relative;
+        margin: auto;
+        padding: 0px;
+        top: 50px;
+        height: 200px;
+        width: 200px;
+    }
+    .img-responsive {
+        margin: auto;
+    }
+    div.bounty-section-desc ul {
+        padding-left: 0px;
+    }
+    .charity-text ul {
+        padding-left: 0px;
+        padding-bottom: 10px;
+        list-style-type: initial;
+        text-align: left;
+    }
+    div.answer code,
+    div.bounty-section-desc a {
+        white-space: pre-wrap;
+        /* css-3 */
+        white-space: -moz-pre-wrap;
+        /* Mozilla, since 1999 */
+        white-space: -pre-wrap;
+        /* Opera 4-6 */
+        white-space: -o-pre-wrap;
+        /* Opera 7 */
+        word-wrap: break-word;
+        /* Internet Explorer 5.5+ */
+    }
+    .faq-img{
+        height: auto;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .header-headline {
+        font-size: 30pt;
+    }
+    .navbar-brand {
+        font-size: 10pt;
+    }
+    .header-btn {
+        width: 10em;
+    }
+}
+
+@media only screen and (max-width: 377px) {
+    #countdown-timer>div {
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-height: 550px) {
+    .header-headline {
+        margin-top: 0px;
+    }
+    .header-running-text {
+        font-size: 15pt;
+    }
+    .coin-logo {
+        top: 15px;
+    }
+    .mouse {
+        display: none;
+    }
+}

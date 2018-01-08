@@ -1,0 +1,1 @@
+# killyourselfcoin.github.io
