@@ -16,5 +16,8 @@
   "homepage": "https://killyourself.network",
   "devDependencies": {
     "live-server": "^1.2.0"
+  },
+  "dependencies": {
+    "jshint": "^2.9.5"
   }
 }

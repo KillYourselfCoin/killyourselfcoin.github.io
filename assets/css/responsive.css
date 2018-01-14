@@ -1,9 +1,4 @@
 @media only screen and (min-width: 768px) {
-    .header-right {
-        display: block;
-        float: right;
-        padding: 6px 20px;
-    }
     .header-headline {
         text-align: left;
         max-width: 380px;
@@ -151,5 +146,13 @@
     }
     .mouse {
         display: none;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .header-right {
+        display: block;
+        float: right;
+        padding: 6px 20px;
     }
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <meta name="theme-color" content="#000000">
-<meta property="og:image" content="assets/images/coin.png" />
+    <meta property="og:image" content="assets/images/coin.png" />
     <title>Kill Yourself Coin</title>
     <link rel="shortcut icon" type="image/png" href="assets/images/coin.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
@@ -59,7 +59,7 @@
                 to both capitalize upon that problem and attempt to fix it at the same time by introducing Kill Yourself
                 Coin, the world's first decentralized network of people telling each other to off themselves. </div>
             <div
-                class="about-desc"> In the modern age, giving helpful advice over the internet can be difficult, attention drawing, and even incriminating
+                class="about-desc"> In the modern age, giving helpful advice over the internet can be difficult, attention-drawing, and even incriminating
                 depending on your country. With the anonymity (and fun!) of blockchain technology, KYS coin gives guidance
                 in a way never before possible, to anonymous people that your recommendations previously couldn’t reach!
                 </div>
@@ -158,14 +158,14 @@
                         <h3 class="display-5 text-center">ETH Raised</h3>
                         <p class="lead text-center">
                             <strong>
-                                <span id="ETHamountRaised">200</span> ETH</strong>
+                                <span id="ETHAmountRaised">???</span> ETH</strong>
                         </p>
                     </div>
                     <div class="col-sm-4">
                         <h3 class="display-5 text-center">USD Raised</h3>
                         <p class="lead text-center">
-                            <strong> $
-                                <span id="USDamountRaised">200,000</span>
+                            <strong>$
+                                <span id="USDAmountRaised">???</span>
                             </strong>
                         </p>
                     </div>
@@ -173,12 +173,20 @@
                         <h3 class="display-5 text-center">KYS Tokens Distributed</h3>
                         <p class="lead text-center">
                             <strong>
-                                <span id="tokensDistributed">2,000,000</span> KYS </strong>
+                                <span id="tokensIssued">???</span> KYS </strong>
                         </p>
                     </div>
+                    <div class="statsError"> There was an error getting data. Try refreshing the page. </div>
                 </div>
             </div>
-        --></div>
+        -->
+        </div>
+        <!--
+        <div class="progress-border">
+            <div id="progress-interior">
+                <span id="soldPercentage">??</span>%</div>
+        </div>
+        -->
         <div class="container-fluid">
             <div class="row information text-center">
                 <div class="col-lg-6">
@@ -256,8 +264,7 @@
                             <div class="question">How do I give you my money? </div>
                         </li>
                         <li>
-                            <div class="answer">Simply send your ETH to the contract address from an ERC20 compatible address (
-                                <span class="not">not</span> an exchange), and hopefully you’ll receive some KYS coins in return.</div>
+                            <div class="answer">Simply send your ETH to the contract address from an ERC-20 compatible address (<span class="not">not</span> an exchange), and hopefully you’ll receive some KYS coins in return.</div>
                         </li>
                         <li>
                             <div class="question">How do I kill myself? </div>
@@ -278,7 +285,7 @@
                         </li>
                         <li>
                             <div class="answer">Buy some KYS coin and send it to their ETH address to let them know how you really feel:
-                                <code>0xB0c0205959c84Cf0bCaA730116b2E86e70033332</code>
+                                <code>0xd407F7ec2a5397C84537B17D58355A5FED6F8B2D</code>
                             </div>
                         </li>
                     </ul>
@@ -339,7 +346,7 @@
                         <p>Think you can help spread the gospel of KYS Coin? We offer generous bounties for social media, forum,
                             and YouTube promotion!</p>
                         <p>3% of KYS Coins are reserved for bounties, claim your stake today! Stakes will be awarded depending
-                            on the type and quality of promotion.</p>
+                            on the type and quality of promotion after the token sale has concluded.</p>
                         <p> Contact us via
                             <a href="mailto:bounty@killyourself.network">bounty@killyourself.network</a> or
                             <a href="https://discord.gg/rgf9wgW" target="_blank">Discord</a> if you think you can help!</p>
@@ -378,7 +385,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/5.0.0/bignumber.min.js"></script>
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/web3@0.20.2/dist/web3.min.js"></script>
+    <script src="assets/js/token.js"></script>
+    -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-91853319-3"></script>
     <script>

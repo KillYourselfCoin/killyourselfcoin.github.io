@@ -1,3 +1,9 @@
+var price = 6969;
+var maxCap = 200;
+var totalSupply = 1500000;
+var availableSupply = price * maxCap;
+var availablePercentage = Math.round(availableSupply / totalSupply * 100);
+
 $(document).ready(function () {
     //abouts appearance
     $(window).scroll(function () {
@@ -38,16 +44,6 @@ $(document).ready(function () {
     var icoStart = 'January 23 2018 14:00:00 UTC';
     var icoEnd = 'February 6 2018 14:00:00 UTC';
 
-    var price = 6969;
-    var maxCap = 200;
-    var totalSupply = 1500000;
-    var availableSupply = price * maxCap;
-    var availablePercentage = Math.round(availableSupply / totalSupply * 100);
-    // adds commas for readabilitys
-    totalSupply = totalSupply.toLocaleString();
-    availableSupply = availableSupply.toLocaleString();
-    price = price.toLocaleString();
-
     var icoStartSpan = document.getElementById("icoStart");
     var icoEndSpan = document.getElementById("icoEnd");
     var priceSpan = document.getElementById("price");
@@ -58,10 +54,10 @@ $(document).ready(function () {
 
     icoStartSpan.innerHTML = icoStart;
     icoEndSpan.innerHTML = icoEnd;
-    priceSpan.innerHTML = price;
+    priceSpan.innerHTML = price.toLocaleString();
     maxCapSpan.innerHTML = maxCap;
-    totalSupplySpan.innerHTML = totalSupply;
-    availableSupplySpan.innerHTML = availableSupply;
+    totalSupplySpan.innerHTML = totalSupply.toLocaleString();
+    availableSupplySpan.innerHTML = availableSupply.toLocaleString();
     availablePercentageSpan.innerHTML = availablePercentage;
 
     // Countdown clock stuff
@@ -100,11 +96,9 @@ $(document).ready(function () {
                 clearInterval(timeinterval);
             }
         }
-
         updateClock();
         var timeinterval = setInterval(updateClock, 1000);
     }
-
 
     var schedule = [
         ['2018-01-01T00:00:00-00:00', icoStart], // leading up to ico
@@ -125,4 +119,4 @@ $(document).ready(function () {
             initializeClock('countdown-timer', endDate);
         }
     }
-})
+});

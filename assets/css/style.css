@@ -1,4 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700');
+#progress-interior {
+    height: 48px;
+    width: 0%;
+    color: white;
+    background-color: rgb(141, 139, 139);
+    text-align: center;
+    font-size: 24pt;
+}
+
+.progress-border {
+    margin-top: -30px;
+    margin-bottom: 20px;
+    border-color: black;
+    border: 1px;
+    background-color: rgb(228, 225, 225);
+}
+
+.statsError {
+    text-align: center;
+}
+
+.information {
+    padding-bottom: 20px;
+}
+
 .charity {
     background-color: rgb(64, 64, 64);
 }
