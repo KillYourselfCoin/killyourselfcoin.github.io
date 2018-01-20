@@ -1,4 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700');
+
+.sale-notice {
+    text-align: center;
+    font-size: 20pt;
+    background-color: rgb(249, 255, 139);
+    border-color: rgb(153, 156, 85);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
 #progress-interior {
     height: 48px;
     width: 0%;

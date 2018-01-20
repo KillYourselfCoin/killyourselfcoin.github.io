@@ -23,7 +23,7 @@ function getTokenStats(price) {
             tokensIssued = data / 1000000000000000000;
             document.getElementById("tokensIssued").innerHTML = tokensIssued.toLocaleString();
             // calculate percentage of tokens sold
-            soldPercentage = tokensIssued / availableSupply * 100;
+            soldPercentage = (tokensIssued / availableSupply * 100).toFixed(2);
             document.getElementById("soldPercentage").innerHTML = soldPercentage;
             // set progress bar
             document.getElementById("progress-interior").style.width = soldPercentage.toString() + "%";
