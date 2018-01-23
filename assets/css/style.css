@@ -7,7 +7,7 @@ code {
     word-wrap: break-word;
 }
 
-.sale-notice {
+#sale-notice {
     text-align: center;
     font-size: 20pt;
     background-color: rgb(249, 255, 139);

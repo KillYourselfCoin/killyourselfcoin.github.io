@@ -97,7 +97,6 @@
         list-style-type: initial;
         text-align: left;
     }
-    div.answer code,
     div.bounty-section-desc a {
         white-space: pre-wrap;
         /* css-3 */
