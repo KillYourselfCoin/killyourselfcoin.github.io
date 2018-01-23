@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700');
 
-.lead code{
-    font-size: 20pt;
+.contract-title{
+    font-size: 28pt;
 }
+
+.lead * {
+    font-size: 22pt;
+}
+
 code {
     word-wrap: break-word;
 }
