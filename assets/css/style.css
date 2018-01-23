@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700');
 
+code {
+    word-wrap: break-word;
+}
+
 .sale-notice {
     text-align: center;
     font-size: 20pt;
