@@ -68,7 +68,11 @@
         */
         margin: auto;
     }
-    .bountysection-desc ul,
+    .bounty-section-desc {
+        font-size: 16pt;
+        line-height: 110%;
+    }
+    .bounty-section-desc ul,
     .faq-section-desc ul {
         padding-left: 0px;
     }
@@ -109,7 +113,7 @@
         word-wrap: break-word;
         /* Internet Explorer 5.5+ */
     }
-    .faq-img{
+    .faq-img {
         height: auto;
         width: auto;
     }
