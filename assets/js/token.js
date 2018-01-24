@@ -1,7 +1,7 @@
 var Web3 = require("web3");
 var web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io"));
 
-function getTokenStats(price) {
+function updateTokenStats(price) {
     var abi = [{
             "constant": true,
             "inputs": [],
@@ -362,27 +362,42 @@ function getTokenStats(price) {
     var contractInstance = contract.at("0xc584a60e2cbedfe6a068371e6e34f05844b3111f");
 
     contractInstance.totalEthInWei(function (err, data) {
-        // get eth raised
-        ETHAmountRaised = data / 1000000000000000000;
-
-        document.getElementById("ETHAmountRaised").innerHTML = ETHAmountRaised.toLocaleString();
-        // calculate USD value
-        document.getElementById("USDAmountRaised").innerHTML = (ETHAmountRaised * price).toFixed(2).toLocaleString();
-
+        if (err) {
+            $(".statsError").show();
+            console.error("Error when connecting to infura node to obtain ETH contributed");
+        } else {
+            // get eth raised
+            ETHAmountRaised = data / 1000000000000000000;
+            document.getElementById("ETHAmountRaised").innerHTML = ETHAmountRaised.toLocaleString();
+            // calculate USD value
+            if (price != null) {
+                document.getElementById("USDAmountRaised").innerHTML = (ETHAmountRaised * price).toFixed(2).toLocaleString();
+            }
+        }
     });
 
     contractInstance.tokensIssued(function (err, data) {
-        // get tokens issued
-        tokensIssued = data / 1000000000000000000;
-        document.getElementById("tokensIssued").innerHTML = tokensIssued.toLocaleString();
-        // calculate percentage of tokens sold
-        soldPercentage = (tokensIssued / availableSupply * 100).toFixed(2);
-        document.getElementById("soldPercentage").innerHTML = soldPercentage;
-        // set progress bar
-        document.getElementById("progress-interior").style.width = soldPercentage.toString() + "%";
+        if (err) {
+            $(".statsError").show();
+            console.error("Error when connecting to infura node to obtain tokens issued");
+        } else {
+            // get tokens issued
+            tokensIssued = data / 1000000000000000000;
+            document.getElementById("tokensIssued").innerHTML = tokensIssued.toLocaleString();
+            // calculate percentage of tokens sold
+            soldPercentage = (tokensIssued / availableSupply * 100).toFixed(2);
+            document.getElementById("soldPercentage").innerHTML = soldPercentage;
+            // set progress bar
+            document.getElementById("progress-interior").style.width = soldPercentage.toString() + "%";
+        }
     });
 
+    /*
     contractInstance.purchasingAllowed(function (err, data) {
+        if (err) {
+            $(".statsError").show();
+            console.error("Error when connecting to infura node to obtain purchaseability");
+        }
         // get purchaseablity
         if (data) {
             // change color and text
@@ -391,30 +406,39 @@ function getTokenStats(price) {
             document.getElementById("sale-notice").style.borderColor = "rgb(52, 139, 81)";
         }
     });
+    */
+}
+
+function handleError() {
+    $(".statsError").show();
+    console.error("Error occurred getting ETH/USD value from Etherscan");
+    updateTokenStats(null);
 }
 
 // gets ETH price from Etherscan <3
 function getETHPrice() {
     var url = "https://api.etherscan.io/api?module=stats&action=ethprice";
-    return $.ajax(url, {
+    return $.ajax({
+        url: url,
         cache: false,
-        dataType: "json"
-    }).then(function (data) {
-        if (data == null) return null;
-        if (data.result == null) return null;
-        if (data.result.ethusd == null) return null;
+        dataType: "json",
 
-        return parseFloat(data.result.ethusd);
+        success: function (data) {
+            try {
+                price = data.result.ethusd;
+            } catch (err) {
+                handleError();
+            }
+            updateTokenStats(price);
+        },
+        error: handleError,
     });
 }
 
 // jquery page load
 $(function () {
-    try {
-        getETHPrice().then(getTokenStats);
-        // hide error message if everything worked
-        $(".statsError").hide();
-    } catch (err) {}
+    $(".statsError").hide();
+    getETHPrice();
 });
 
 // JavaScript was a mistake

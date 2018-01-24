@@ -11,7 +11,7 @@
 code {
     word-wrap: break-word;
 }
-
+/*
 #sale-notice {
     text-align: center;
     font-size: 20pt;
@@ -26,6 +26,22 @@ code {
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
+*/
+#sale-notice {
+    text-align: center;
+    font-size: 20pt;
+    background-color: rgb(91, 182, 121);
+    border-color: rgb(52, 139, 81);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
 
 #progress-interior {
     height: 48px;
