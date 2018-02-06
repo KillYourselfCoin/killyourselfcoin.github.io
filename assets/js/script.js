@@ -44,16 +44,16 @@ $(document).ready(function () {
     var icoStart = 'January 23 2018 14:00:00 UTC';
     var icoEnd = 'February 6 2018 14:00:00 UTC';
 
-    var icoStartSpan = document.getElementById("icoStart");
-    var icoEndSpan = document.getElementById("icoEnd");
+    //var icoStartSpan = document.getElementById("icoStart");
+    //var icoEndSpan = document.getElementById("icoEnd");
     var priceSpan = document.getElementById("price");
     var maxCapSpan = document.getElementById("maxCap");
     var totalSupplySpan = document.getElementById("totalSupply");
     var availableSupplySpan = document.getElementById("availableSupply");
     var availablePercentageSpan = document.getElementById("availablePercentage");
 
-    icoStartSpan.innerHTML = icoStart;
-    icoEndSpan.innerHTML = icoEnd;
+    //icoStartSpan.innerHTML = icoStart;
+    //icoEndSpan.innerHTML = icoEnd;
     priceSpan.innerHTML = price.toLocaleString();
     maxCapSpan.innerHTML = maxCap;
     totalSupplySpan.innerHTML = totalSupply.toLocaleString();
@@ -61,6 +61,7 @@ $(document).ready(function () {
     availablePercentageSpan.innerHTML = availablePercentage;
 
     // Countdown clock stuff
+    /*
     function getTimeRemaining(endtime) {
         var t = Date.parse(endtime) - Date.parse(new Date());
         var seconds = Math.floor((t / 1000) % 60);
@@ -119,4 +120,5 @@ $(document).ready(function () {
             initializeClock('countdown-timer', endDate);
         }
     }
+    */
 });
